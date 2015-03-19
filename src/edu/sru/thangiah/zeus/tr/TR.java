@@ -158,7 +158,7 @@ public TR(String dataFile, boolean isMakeSeparateFile, Object selectionTypeObjec
 	//Check for the quality and integrity of the solution
 
 	System.out.println("Routes that cannot be routed due to lack of local optimization:");
-	TRShipment aShipment = mainShipments.getHead();
+	TRShipment aShipment = mainShipments.getHead().getNext();
 	while(aShipment != mainShipments.getTail()) {
 		if(!aShipment.getCanBeRouted()) {
 			System.out.println("Shipment " + aShipment.getIndex());

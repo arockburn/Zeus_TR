@@ -160,11 +160,12 @@ public void readShipmentFile()
 	cell.setCellType(TYPE_NUMERIC);            //ENSURE IT IS OF NUMERIC TYPE
 	float currentCellValue = (float) cell.getNumericCellValue();
 	//EXTRACT THE NUMERIC CELL VALUE
-	numberShipmentsNodes = (int) currentCellValue;
+	numberShipmentsNodes = sheet.getPhysicalNumberOfRows();
 
 
 	//READ IN ALL THE NODES
-	for(int rowCounter = 0; rowCounter < numberShipmentsNodes; rowCounter++) {
+    while(rowIterator.hasNext()){
+//	for(int rowCounter = 0; rowCounter < numberShipmentsNodes; rowCounter++) {
 		//ITERATE OVER EVERY ROW
 		//GET THE NEXT ROW
 		row = rowIterator.next();
@@ -451,7 +452,7 @@ public boolean runQA() {
 	boolean isServicedGood;
 
 	//Area all the customer being serviced and are they serviced only once
-	System.out.print("Check on customer service freuqency: ");
+	System.out.print("Check on customer service frequency: ");
 
 	isServicedGood = pvrpQAShipments.customerServicedRequestedFrequency(pvrpQADepots);
 	//RUN QA TO SEE IF REQUESTED FREQUENCY IS MET
