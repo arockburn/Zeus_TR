@@ -2,6 +2,7 @@ package edu.sru.thangiah.zeus.tr.trQualityAssurance;
 
 
 import edu.sru.thangiah.zeus.core.Settings;
+import edu.sru.thangiah.zeus.tr.TRCoordinates;
 
 import java.util.Vector;
 
@@ -36,277 +37,270 @@ import java.util.Vector;
 
 public class TRQADay {
 
-private Vector nodes       = new Vector();    //holds a vector full of nodes
-private double demand      = -1;                //the demand for the day
-private double distance    = -1;            //the distance for the day
-private double maxDemand   = -1;            //the max demand for a day
-private double maxDistance = -1;        //the max distance for a day
-private int    dayNumber   = -1;                //the day number the current day is
+    private Vector nodes = new Vector();    //holds a vector full of nodes
+    private double demand = -1;                //the demand for the day
+    private double distance = -1;            //the distance for the day
+    private double maxDemand = -1;            //the max demand for a day
+    private double maxDistance = -1;        //the max distance for a day
+    private int dayNumber = -1;                //the day number the current day is
 
 
+    //CONSTRUCTOR
+    public boolean checkDistanceConstraint(TRQADay day) {
+        //VARIABLES
+        boolean isDiagnostic = true;        //print diagnostic information?
+        boolean status = true;                //return value
+        double totalDistance = 0;            //
+        double distance = 0;                //
+        TRQANode nodeOne;                    //these are for
+        TRQANode nodeTwo;                    //distance calculations
+        int distanceOne;                    //
+        int distanceTwo;                    //
 
 
-//CONSTRUCTOR
-public boolean checkDistanceConstraint(TRQADay day) {
-	//VARIABLES
-	boolean isDiagnostic = true;        //print diagnostic information?
-	boolean status = true;                //return value
-	double totalDistance = 0;            //
-	double distance = 0;                //
-	TRQANode nodeOne;                    //these are for
-	TRQANode nodeTwo;                    //distance calculations
-	int distanceOne;                    //
-	int distanceTwo;                    //
+        //IF HAVE NO NODES
+        if (getNodes().size() == 0) {
+            return status;
+        }
 
 
-	//IF HAVE NO NODES
-	if(getNodes().size() == 0) {
-		return status;
-	}
+        //COMPUTE DISTANCE FROM DEPOT TO FIRST NODE
+        nodeOne = (TRQANode) getNodes().elementAt(0);
 
 
-	//COMPUTE DISTANCE FROM DEPOT TO FIRST NODE
-	nodeOne = (TRQANode) getNodes().elementAt(0);
+        //COMPUTE TOTAL TRAVEL DISTANCE IN THE ROUTE
+        for (int i = 1; i < getNodes().size(); i++) {
+            nodeTwo = (TRQANode) getNodes().elementAt(i);
+
+            TRCoordinates firstPoint = new TRCoordinates(nodeOne.getX(), nodeOne.getY());
+            TRCoordinates secondPoint = new TRCoordinates(nodeTwo.getX(), nodeTwo.getY());
+            distance = firstPoint.calculateDistanceThisMiles(secondPoint);
+
+            //PYTHAGOREAN THEROEM
+//        distance = calculateDistanceUsingLatLon(nodeOne.getX(), nodeOne.getY(), nodeTwo.getX(), nodeTwo.getY());
+//		distance = (float) Math.sqrt((double) Math.abs((nodeOne.getX() - nodeTwo.getX())) * Math.abs((nodeOne.getX() - nodeTwo.getX())) +
+//									 (Math.abs((nodeOne.getY() - nodeTwo.getY())) * Math.abs((nodeOne.getY() - nodeTwo.getY()))));
+            totalDistance += distance;
+            if (isDiagnostic) {
+                System.out.println("    Distance from " + nodeOne.getIndex() + " to " +
+                        nodeTwo.getIndex() + " = " + distance);
+            }
+            nodeOne = nodeTwo;
+        }
 
 
-	//COMPUTE TOTAL TRAVEL DISTANCE IN THE ROUTE
-	for(int i = 1; i < getNodes().size(); i++) {
-		nodeTwo = (TRQANode) getNodes().elementAt(i);
+        //Convert the distance to integer values for comparison. The convertion
+        //takes up to a precison of 3 decimal places. Comapring floats can lead
+        //to inaccurate results as errors start occuring after the 4th decimal
+        //place
+
+        //converting to ints because floats can be inaccurate
+        //and depending on the situation floats have been used
+        //over doubles
+        //less than one mile variation in distances isn't a
+        //quality problem to worry about
+        distanceOne = (int) (day.getDistance());
+        distanceTwo = (int) (totalDistance);
+
+        if (isDiagnostic) {
+            //System.out.println("    Distance from " + node1.getIndex() + " to " +
+            //                   node2.getIndex() + " = " + truck.getDistance());
+            System.out.println("   Truck distance " + day.getDistance() +
+                    " : Computed distance " + totalDistance);
+
+        }
+
+        //DO OUR DISTANCES MATCH
+        //because the int conversion chops off the decimal we will consider
+        //our results to be OKAY if the distances are within one mile of
+        //each other, so if distanceOne == 359 then distanceTwo can be
+        //358, 359, or 360
+        if (distanceOne == distanceTwo || distanceOne == distanceTwo - 1 || distanceTwo == distanceOne - 1) {
+            status = true;
+        } else {
+            //	if(distanceOne != distanceTwo) {
+            Settings.printDebug(Settings.ERROR, "Truck # " + day.getDayNumber() +
+                    " distance does not match computed distance " +
+                    day.getDistance() + " " + totalDistance);
+            status = false;
+            return status;
+        }
+
+        //DOES THIS EXCEED MAXIUMUM DISTANCE
+        if (totalDistance > day.getMaxDistance() && day.getMaxDistance() > 0) {
+            Settings.printDebug(Settings.ERROR, "Truck # " + day.getDayNumber() +
+                    "distance exceeds maximum distance " +
+                    totalDistance + " " + getMaxDistance());
+            status = false;
+            return status;
+        }
+
+        return status;
+    }//CHECK_DISTANCE_CONSTRAINTS ENDS HERE*******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
-		//PYTHAGOREAN THEROEM
-		distance = (float) Math.sqrt((double) (nodeOne.getX() - nodeTwo.getX()) * (nodeOne.getX() - nodeTwo.getX()) +
-									 ((nodeOne.getY() - nodeTwo.getY()) * (nodeOne.getY() - nodeTwo.getY())));
-		totalDistance += distance;
-		if(isDiagnostic) {
-			System.out.println("    Distance from " + nodeOne.getIndex() + " to " +
-							   nodeTwo.getIndex() + " = " + distance);
-		}
-		nodeOne = nodeTwo;
-	}
+    //GETTER
+    public Vector getNodes() {
+        return this.nodes;
+    }
 
 
-	//Convert the distance to integer values for comparison. The convertion
-	//takes up to a precison of 3 decimal places. Comapring floats can lead
-	//to inaccurate results as errors start occuring after the 4th decimal
-	//place
-
-	//converting to ints because floats can be inaccurate
-	//and depending on the situation floats have been used
-	//over doubles
-	//less than one mile variation in distances isn't a
-	//quality problem to worry about
-	distanceOne = (int) (day.getDistance());
-	distanceTwo = (int) (totalDistance);
-
-	if(isDiagnostic) {
-		//System.out.println("    Distance from " + node1.getIndex() + " to " +
-		//                   node2.getIndex() + " = " + truck.getDistance());
-		System.out.println("   Truck distance " + day.getDistance() +
-						   " : Computed distance " + totalDistance);
-
-	}
-
-	//DO OUR DISTANCES MATCH
-	//because the int conversion chops off the decimal we will consider
-	//our results to be OKAY if the distances are within one mile of
-	//each other, so if distanceOne == 359 then distanceTwo can be
-	//358, 359, or 360
-	if(distanceOne == distanceTwo || distanceOne == distanceTwo - 1 || distanceTwo == distanceOne - 1) {
-		status = true;
-	}
-	else {
-		//	if(distanceOne != distanceTwo) {
-		Settings.printDebug(Settings.ERROR, "Truck # " + day.getDayNumber() +
-											" distance does not match computed distance " +
-											day.getDistance() + " " + totalDistance);
-		status = false;
-		return status;
-	}
-
-	//DOES THIS EXCEED MAXIUMUM DISTANCE
-	if(totalDistance > day.getMaxDistance()) {
-		Settings.printDebug(Settings.ERROR, "Truck # " + day.getDayNumber() +
-											"distance exceeds maximum distance " +
-											totalDistance + " " + getMaxDistance());
-		status = false;
-		return status;
-	}
-
-	return status;
-}//CHECK_DISTANCE_CONSTRAINTS ENDS HERE*******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    //SETTER
+    public void setNodes(Vector nodes) {
+        this.nodes = nodes;
+    }
 
 
+    //GETTER
+    public double getDistance() {
+        return this.distance;
+    }
 
 
-//GETTER
-public Vector getNodes() {
-	return this.nodes;
-}
+    //SETTER
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
 
 
+    //GETTER
+    public int getDayNumber() {
+        return this.dayNumber;
+    }
 
 
-//SETTER
-public void setNodes(Vector nodes) {
-	this.nodes = nodes;
-}
+    //SETTER
+    public void setDayNumber(int dayNumber) {
+        this.dayNumber = dayNumber;
+    }
 
 
+    //GETTER
+    public double getMaxDistance() {
+        return this.maxDistance;
+    }
 
 
-//GETTER
-public double getDistance() {
-	return this.distance;
-}
+    //SETTER
+    public void setMaxDistance(double maxDistance) {
+        this.maxDistance = maxDistance;
+    }
 
 
-
-
-//SETTER
-public void setDistance(double distance) {
-	this.distance = distance;
-}
-
-
-
-
-//GETTER
-public int getDayNumber() {
-	return this.dayNumber;
-}
-
-
-
-
-//SETTER
-public void setDayNumber(int dayNumber) {
-	this.dayNumber = dayNumber;
-}
-
-
-
-
-//GETTER
-public double getMaxDistance() {
-	return this.maxDistance;
-}
-
-
-
-
-//SETTER
-public void setMaxDistance(double maxDistance) {
-	this.maxDistance = maxDistance;
-}
-
-
-
-
-//METHOD
+    //METHOD
 //THIS CHECKS THE CAPACITY CONSTRAINT OF A PASSED DAY
-public boolean checkCapacityConstraint(TRQADay day) {
-	//VARIABLES
-	boolean isDiagnostic = true;            //
-	boolean status = true;                    //return boolean
-	double totalCapacity = 0;                //total capacity
-	double capacity = 0;                    //
-	TRQANode node;                        //
-	int gotCapacity;
-	int computedCapacity;
+    public boolean checkCapacityConstraint(TRQADay day) {
+        //VARIABLES
+        boolean isDiagnostic = true;            //
+        boolean status = true;                    //return boolean
+        double totalCapacity = 0;                //total capacity
+        double capacity = 0;                    //
+        TRQANode node;                        //
+        int gotCapacity;
+        int computedCapacity;
 
 
-	//DO WE HAVE NODES TO PROCESS
-	if(getNodes().size() == 0) {
-		return false;
-	}
+        //DO WE HAVE NODES TO PROCESS
+        if (getNodes().size() == 0) {
+            return false;
+        }
 
 
-	//COMPUTE TOTAL DISTANCE OF THE ROUTE
-	//...JUST USE GETTERS HERE AND SUMMATION
-	for(int i = 1; i < getNodes().size() - 1; i++) {
-		node = (TRQANode) getNodes().elementAt(i);
-		capacity = node.getDemand();
-		if(isDiagnostic) {
-			System.out.println("    Node " + node.getIndex() + " demand: " +
-							   +capacity);
-		}
-		totalCapacity += capacity;
-	}
+        //COMPUTE TOTAL DISTANCE OF THE ROUTE
+        //...JUST USE GETTERS HERE AND SUMMATION
+        for (int i = 1; i < getNodes().size() - 1; i++) {
+            node = (TRQANode) getNodes().elementAt(i);
+            capacity = node.getDemand();
+            if (isDiagnostic) {
+                System.out.println("    Node " + node.getIndex() + " demand: " +
+                        +capacity);
+            }
+            totalCapacity += capacity;
+        }
 
 
-	//Convert the capacity to integer values for comparison. The convertion
-	//takes up to a precison of 3 decimal places. Comapring floats can lead
-	//to inaccurate results as errors start occuring after the 4th decimal
-	//place
-	gotCapacity = (int) (day.getDemand() * 1000);
-	computedCapacity = (int) (totalCapacity * 1000);
+        //Convert the capacity to integer values for comparison. The convertion
+        //takes up to a precison of 3 decimal places. Comapring floats can lead
+        //to inaccurate results as errors start occuring after the 4th decimal
+        //place
+        gotCapacity = (int) (day.getDemand() * 1000);
+        computedCapacity = (int) (totalCapacity * 1000);
 
 
-	if(isDiagnostic) {
-		System.out.println("   Truck capacity " + day.getDemand() +
-						   " : Computed capacity " + totalCapacity);
-	}
+        if (isDiagnostic) {
+            System.out.println("   Truck capacity " + day.getDemand() +
+                    " : Computed capacity " + totalCapacity);
+        }
 
 
-	//DOES TRUCK CAPACITY FROM GETTER MATCH OUR COMPUTED CAPACITY
-	if(gotCapacity != computedCapacity) { //check up to 3 decimal placess
-		Settings.printDebug(Settings.ERROR, "Truck # " + day.getIndex() +
-											" capacity does not match computed capacity " +
-											day.getDemand() + " " + totalCapacity);
-		status = false;
-		return status;
-	}
+        //DOES TRUCK CAPACITY FROM GETTER MATCH OUR COMPUTED CAPACITY
+        if (gotCapacity != computedCapacity) { //check up to 3 decimal placess
+            Settings.printDebug(Settings.ERROR, "Truck # " + day.getIndex() +
+                    " capacity does not match computed capacity " +
+                    day.getDemand() + " " + totalCapacity);
+            status = false;
+            return status;
+        }
 
 
-	//DOES THE COMPUTEd CAPACITY EXCEED OUR MAXIMUM CAPACITY
-	if(totalCapacity > day.getMaxDemand()) {
-		Settings.printDebug(Settings.ERROR, "Truck # " + day.getDayNumber() +
-											"distance exceeds maximum capacity " +
-											totalCapacity + " " + day.getMaxDemand());
-		status = false;
-		return status;
-	}
-	return status;
-}//CHECK_CAPACITY_CONSTRAINTS ENDS HERE*******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        //DOES THE COMPUTEd CAPACITY EXCEED OUR MAXIMUM CAPACITY
+        if (totalCapacity > day.getMaxDemand()) {
+            Settings.printDebug(Settings.ERROR, "Truck # " + day.getDayNumber() +
+                    "distance exceeds maximum capacity " +
+                    totalCapacity + " " + day.getMaxDemand());
+            status = false;
+            return status;
+        }
+        return status;
+    }//CHECK_CAPACITY_CONSTRAINTS ENDS HERE*******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
+    //GETTER
+    public double getDemand() {
+        return this.demand;
+    }
 
 
-//GETTER
-public double getDemand() {
-	return this.demand;
-}
+    //SETTER
+    public void setDemand(double demand) {
+        this.demand = demand;
+    }
 
 
+    //GETTER
+    public int getIndex() {
+        return getDayNumber();
+    }
 
 
-//SETTER
-public void setDemand(double demand) {
-	this.demand = demand;
-}
+    //GETTER
+    public double getMaxDemand() {
+        return this.maxDemand;
+    }
 
 
+    //SETTER
+    public void setMaxDemand(double maxDemand) {
+        this.maxDemand = maxDemand;
+    }
 
+    //function adapted from http://www.geodatasource.com/developers/java
+    private double calculateDistanceUsingLatLon(double latitiude1, double longitude1, double latitude2, double longitude2) {
+        double lonDifference = longitude1 - longitude2;
+        double distance = Math.sin(convertDegreesToRadians(latitiude1)) * Math.sin(convertDegreesToRadians(latitude2))
+                + Math.cos(convertDegreesToRadians(latitiude1)) * Math.cos(convertDegreesToRadians(latitude2)) * Math.cos(convertDegreesToRadians(lonDifference));
+        distance = Math.acos(distance);
+        distance = convertRadiansToDegrees(distance);
+        distance = distance * 60 * 1.1515;
+        return distance;
+    }
 
-//GETTER
-public int getIndex() {
-	return getDayNumber();
-}
+    private double convertDegreesToRadians(double degrees) {
+        return (degrees * Math.PI / 180);
+    }
 
+    private double convertRadiansToDegrees(double radians){
+        return (radians * 180 / Math.PI);
+    }
 
-
-
-//GETTER
-public double getMaxDemand() {
-	return this.maxDemand;
-}
-
-
-
-
-//SETTER
-public void setMaxDemand(double maxDemand) {
-	this.maxDemand = maxDemand;
-}
 }

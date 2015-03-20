@@ -407,7 +407,6 @@ public void readSolutionFile()
 						cell = cellIterator.next();                            //get the cell data
 						cell.setCellType(TYPE_NUMERIC);
 						float currentCellValue = (float) cell.getNumericCellValue();    //extract cell data into int
-
 						switch(nodeColumn) {
 							case 1:    //READ INDEX
 								theNode.setIndex((int) currentCellValue);
@@ -418,7 +417,7 @@ public void readSolutionFile()
 							case 3:    //READ Y COORD
 								theNode.setY(currentCellValue);
 								break;
-							case 4:    //READ DEMAND
+							case 6:    //READ DEMAND
 								theNode.setDemand(currentCellValue);
 								break;
 							default:    //WE HAVE NO NODAL TYPE
@@ -452,7 +451,7 @@ public boolean runQA() {
 	boolean isServicedGood;
 
 	//Area all the customer being serviced and are they serviced only once
-	System.out.print("Check on customer service frequency: ");
+	System.out.print("Check on customer service frequency: \n");
 
 	isServicedGood = pvrpQAShipments.customerServicedRequestedFrequency(pvrpQADepots);
 	//RUN QA TO SEE IF REQUESTED FREQUENCY IS MET
@@ -467,7 +466,7 @@ public boolean runQA() {
 
 
 	//Check on maximum travel time of truck
-	System.out.print("Check on maximum distance of trucks: ");
+	System.out.print("Check on maximum distance of trucks: \n");
 	isDistanceGood = pvrpQADepots.checkDistanceConstraint();
 	//	isGood = isGood && pvrpQADepots.checkDistanceConstraint();
 	//MAKE SURE WE ARE WITHIN OUR DISTANCE CONSTRAINTS
@@ -484,8 +483,9 @@ public boolean runQA() {
 	}
 
 
+    //TODO do we need this check? I don't think there is a capacity that needs to be checked....
 	//Check on maximum demand of a truck
-	System.out.print("Check on maximum demand of trucks: ");
+	System.out.print("Check on maximum demand of trucks: \n");
 	//	isDemandGood = isGood && pvrpQADepots.checkCapacityConstraint();
 	isDemandGood = pvrpQADepots.checkCapacityConstraint();
 	//MAKE SURE WE ARE WITHIN OUR CAPACITY CONSTRAINT
