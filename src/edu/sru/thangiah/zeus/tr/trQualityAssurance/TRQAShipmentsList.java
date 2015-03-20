@@ -89,7 +89,6 @@ public boolean customerServicedRequestedFrequency(TRQADepotsList qaDepots) {
 		}
 	}
 
-
 	//CHECK OUR DATA -- COMPARE IT
 	for(int n = 0; n < getShipments().size(); n++) {
 		TRQAShipment s = (TRQAShipment) getShipments().elementAt(n);
@@ -108,6 +107,7 @@ public boolean customerServicedRequestedFrequency(TRQADepotsList qaDepots) {
 			System.out.println(
 					"PASS: Shipment " + s.getIndex() + " is serviced " + s.getServCount() + "/" + s.getFrequency() +
 					"  time(s)");
+            //didPassTest = true;
 		}
 	}
 	return didPassTest;

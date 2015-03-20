@@ -580,7 +580,7 @@ public void writeOutData(FileOutputStream out)
 	cell.setCellValue(NULL_VALUE);
 
 	cell = row.createCell(columnCounter++);
-	cell.setCellValue(TRProblemInfo.numDepots);
+	cell.setCellValue(TRProblemInfo.NUMBER_DEPOTS);
 
 	cell = row.createCell(columnCounter++);
 	cell.setCellValue(NULL_VALUE);
@@ -627,7 +627,7 @@ public void writeOutData(FileOutputStream out)
 
 		TRTrucksList truckLL = theDepot.getSubList();
 		//extract trucks linked list from depot
-		TRTruck theTruck = truckLL.getHead();
+		TRTruck theTruck = truckLL.getHead().getNext();
 		//extract single truck from the linked list
 		while(theTruck != truckLL.getTail()) {
 
@@ -662,8 +662,7 @@ public void writeOutData(FileOutputStream out)
 			//			cell.setCellValue(theTruck.getTruckType().getMaxDuration());
 
 			cell = row.createCell(columnCounter++);
-			/** @todo fix this...numberOfDays have a random -2 in here*/
-			cell.setCellValue(theTruck.getSubList().getSize() - 2);
+			cell.setCellValue(theTruck.getSubList().getSize());
 
 			cell = row.createCell(9);
 			cell.setCellValue(NULL_VALUE);
@@ -745,7 +744,7 @@ public void writeOutData(FileOutputStream out)
 
 
 					cell = row.createCell(columnCounter++);
-					cell.setCellValue(NULL_VALUE);
+					cell.setCellValue(theShipment.getDemand());
 
 					cell = row.createCell(columnCounter++);
 					cell.setCellValue(NULL_VALUE);

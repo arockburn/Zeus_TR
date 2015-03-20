@@ -158,7 +158,7 @@ public TR(String dataFile, boolean isMakeSeparateFile, Object selectionTypeObjec
 	//Check for the quality and integrity of the solution
 
 	System.out.println("Routes that cannot be routed due to lack of local optimization:");
-	TRShipment aShipment = mainShipments.getHead();
+	TRShipment aShipment = mainShipments.getHead().getNext();
 	while(aShipment != mainShipments.getTail()) {
 		if(!aShipment.getCanBeRouted()) {
 			System.out.println("Shipment " + aShipment.getIndex());
@@ -247,9 +247,12 @@ public int readDataFromFile(final String TRFileName)
 					newShipment.setPickupPointName(cell.getStringCellValue());
 					break;
 				case PICKUP_POINT:
-					cell.setCellType(Cell.CELL_TYPE_NUMERIC);
+					//cell.setCellType(Cell.CELL_TYPE_NUMERIC);
 					//					int test = (int) cell.getNumericCellValue();
-					newShipment.setNodeNumber((int) cell.getNumericCellValue());
+                    cell.setCellType(Cell.CELL_TYPE_STRING);
+                    String pointName = cell.getStringCellValue();
+                    double point = Double.valueOf(pointName);
+					newShipment.setNodeNumber((int) point);
 					//					newShipment.setNodeNumber(test);
 					break;
 				case LATITUDE:
@@ -330,8 +333,10 @@ public int readDataFromFile(final String TRFileName)
 		}
 		//		newShipment.setVisitationCombination();
 		//		try {
-		System.out.println("Node Counter: " + rowCounter);
-		mainShipments.insertAfterLastIndex(newShipment);
+        if(newShipment.getVisitFrequency() != 0) {
+            System.out.println("Node Counter: " + rowCounter);
+            mainShipments.insertAfterLastIndex(newShipment);
+        }
 		//		}
 		//		catch(IllegalAccessException e) {
 		//			e.printStackTrace();
@@ -443,7 +448,7 @@ public void createInitialRoutes()
 			//does this
 
 			theShipment.setAssigned(true);
-			continue;
+			//continue;
 		}
 
 		if(theShipment == null) {

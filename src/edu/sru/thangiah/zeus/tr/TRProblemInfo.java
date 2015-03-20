@@ -51,7 +51,7 @@ public class TRProblemInfo
 
 
 public final static int NUMBER_DAYS_SERVICED            = 6;
-public final static int NUMBER_TRUCKS                   = 2;
+public final static int NUMBER_TRUCKS                   = 1;
 public final static int WORK_HOURS_PER_DAY              = 8;
 public static final int MAX_COMBINATIONS                = 1;
 public static final int NUMBER_DEPOTS                   = 1;
