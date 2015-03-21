@@ -76,10 +76,6 @@ public class TRQADay {
             TRCoordinates secondPoint = new TRCoordinates(nodeTwo.getY(), nodeTwo.getX());
             distance = firstPoint.calculateDistanceThisMiles(secondPoint);
 
-            //PYTHAGOREAN THEROEM
-//        distance = calculateDistanceUsingLatLon(nodeOne.getX(), nodeOne.getY(), nodeTwo.getX(), nodeTwo.getY());
-//		distance = (float) Math.sqrt((double) Math.abs((nodeOne.getX() - nodeTwo.getX())) * Math.abs((nodeOne.getX() - nodeTwo.getX())) +
-//									 (Math.abs((nodeOne.getY() - nodeTwo.getY())) * Math.abs((nodeOne.getY() - nodeTwo.getY()))));
             totalDistance += distance;
             if (isDiagnostic) {
                 System.out.println("    Distance from " + nodeOne.getIndex() + " to " +

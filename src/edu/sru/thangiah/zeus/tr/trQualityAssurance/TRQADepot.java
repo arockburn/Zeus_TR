@@ -46,70 +46,70 @@ public class TRQADepot
 		extends QADepot
 		implements java.io.Serializable, Cloneable {
 
-//VARIABLES
-private double maxDistance;
-private double maxDemand;
+	//VARIABLES
+	private double maxDistance;
+	private double maxDemand;
 
 
 
 
-//METHOD
+	//METHOD
 //CHECKS THE DISTANCE TRAVELLED AGAINST THE MAXIMUM
-public boolean checkDistanceConstraint(TRQADepot depot) {
-	for(int i = 0; i < getTrucks().size(); i++) {
-		//			System.out.println("_____________TRUCK" + i);
-		TRQATruck truck = (TRQATruck) getTrucks().elementAt(i);
-		if(!truck.checkDistanceConstraint(truck)) {
-			return false;
+	public boolean checkDistanceConstraint(TRQADepot depot) {
+		for(int i = 0; i < getTrucks().size(); i++) {
+			//			System.out.println("_____________TRUCK" + i);
+			TRQATruck truck = (TRQATruck) getTrucks().elementAt(i);
+			if(!truck.checkDistanceConstraint(truck)) {
+				return false;
+			}
 		}
-	}
-	return true;
-}//CHECK_DISTANCE_CONSTRAINTS ENDS HERE*******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+		return true;
+	}//CHECK_DISTANCE_CONSTRAINTS ENDS HERE*******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 
-//METHOD
+	//METHOD
 //CHECKS THE CAPACITY AGAINST THE MAXIMUM
-public boolean checkCapacityConstraint() {
-	for(int i = 0; i < getTrucks().size(); i++) {
-		TRQATruck truck = (TRQATruck) getTrucks().elementAt(i);
-		if(!truck.checkCapacityConstraint(truck)) {
-			return false;
+	public boolean checkCapacityConstraint() {
+		for(int i = 0; i < getTrucks().size(); i++) {
+			TRQATruck truck = (TRQATruck) getTrucks().elementAt(i);
+			if(!truck.checkCapacityConstraint(truck)) {
+				return false;
+			}
 		}
+		return true;
+	}//CHECK_CAPACITY_CONSTRAINTS ENDS HERE*******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+	//GETTER
+	public double getMaxDistance() {
+		return this.maxDistance;
 	}
-	return true;
-}//CHECK_CAPACITY_CONSTRAINTS ENDS HERE*******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 
-//GETTER
-public double getMaxDistance() {
-	return this.maxDistance;
-}
+	//SETTER
+	public void setMaxDistance(double maxDistance) {
+		this.maxDistance = maxDistance;
+	}
 
 
 
 
-//SETTER
-public void setMaxDistance(double maxDistance) {
-	this.maxDistance = maxDistance;
-}
+	//GETTER
+	public double getMaxDemand() {
+		return this.maxDemand;
+	}
 
 
 
 
-//GETTER
-public double getMaxDemand() {
-	return this.maxDemand;
-}
-
-
-
-
-//SETTER
-public void setMaxDemand(double maxDemand) {
-	this.maxDemand = maxDemand;
-}
+	//SETTER
+	public void setMaxDemand(double maxDemand) {
+		this.maxDemand = maxDemand;
+	}
 }

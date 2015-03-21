@@ -40,72 +40,70 @@ public class TRFeasibility
 		implements java.io.Serializable, Cloneable {
 
 
-//VARIABLES
-private TRNodesList thisRoute;
+	//VARIABLES
+	private TRNodesList thisRoute;
 
 
 
 
-//CONSTRUCTOR
-public TRFeasibility() {
-}
-
+	//CONSTRUCTOR
+	public TRFeasibility() {
+	}
 
 //CONSTRUCTOR
 //ORIGINAL NOTE FROM Dr. Sam's VRP
 
-
-
-
-/**
- * Constructor for the feasibilty, will send the constants as well as a
- * pointer to the route that will be checked
- *
- * @param maxd      max duration
- * @param maxq      max capacity
- * @param thisRoute the route
- */
-public TRFeasibility(final double maxd, final float maxq, final TRNodesList thisRoute) {
-	maxDuration = maxd;
-	maxCapacity = maxq;
-	this.thisRoute = thisRoute;
-}//END CONSTRUCTOR *******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	/**
+	 * Constructor for the feasibilty, will send the constants as well as a
+	 * pointer to the route that will be checked
+	 *
+	 * @param maxd      max duration
+	 * @param maxq      max capacity
+	 * @param thisRoute the route
+	 */
+	public TRFeasibility(final double maxd, final float maxq, final TRNodesList thisRoute) {
+		maxDuration = maxd;
+		maxCapacity = maxq;
+		this.thisRoute = thisRoute;
+	}//END CONSTRUCTOR *******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 
-public TRFeasibility(final TRFeasibility copyMe) {
-	this.maxDuration = copyMe.maxDuration;
-	this.maxDistance = copyMe.maxDistance;
-	this.maxTravelTime = copyMe.maxTravelTime;
-	this.maxCapacity = copyMe.maxCapacity;
-	this.thisRoute = new TRNodesList(copyMe.thisRoute);
+	public TRFeasibility(final TRFeasibility copyMe) {
+		this.maxDuration = copyMe.maxDuration;
+		this.maxDistance = copyMe.maxDistance;
+		this.maxTravelTime = copyMe.maxTravelTime;
+		this.maxCapacity = copyMe.maxCapacity;
+		this.thisRoute = new TRNodesList(copyMe.thisRoute);
 
-}
+	}
 
 
 //METHOD
 //ORIGINAL NOTE
 
 
+	/**
+	 * This function checks the feasibility of the route.
+	 *
+	 * @return true if feasible, false if not.
+	 */
+	public boolean isFeasible() {
+		double currentDistance;
+		double currentDemand;
+
+		if(thisRoute == null) {
+			//if our root is empty
+			System.exit(1);
+			//ostrich algorithm
+		}
+
+		//todo check this commented out code. trying to clean up comments but return true is not commented out
+		//for some reason the rest of the code is
 
 
-/**
- * This function checks the feasibility of the route.
- *
- * @return true if feasible, false if not.
- */
-public boolean isFeasible() {
-	double currentDistance;
-	double currentDemand;
-
-	if(thisRoute == null) {
-		//if our root is empty
-		System.exit(1);
-		//ostrich algorithm
-	}
-
-	currentDistance = edu.sru.thangiah.zeus.pvrp.PVRPProblemInfo.nodesLLLevelCostF.getTotalDistance(thisRoute);
+		currentDistance = edu.sru.thangiah.zeus.pvrp.PVRPProblemInfo.nodesLLLevelCostF.getTotalDistance(thisRoute);
 //	currentDemand = TRProblemInfo.nodesLLLevelCostF.getTotalDemand(thisRoute);		no total demand for TR
 
 
@@ -117,16 +115,16 @@ public boolean isFeasible() {
 		//else, our trucks are good
 //		return false;
 //	}
-}//END IS_FEASIBLE *******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	}//END IS_FEASIBLE *******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 
-//METHOD
+	//METHOD
 //sets the route to
-public void setRoute(final TRNodesList nodes) {
-	this.thisRoute = nodes;
-}
+	public void setRoute(final TRNodesList nodes) {
+		this.thisRoute = nodes;
+	}
 
 
 }

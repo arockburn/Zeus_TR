@@ -39,36 +39,21 @@ public class TRAttributes
 		implements java.io.Serializable, Cloneable {
 
 
-    private float totalDistance;
+	private float totalDistance;
 
-public TRAttributes(final TRAttributes copyMe) {
-	setTotalDemand(copyMe.getTotalDemand());
-	setTotalDistance(copyMe.getTotalDistance());
-	setTotalCost(copyMe.getTotalCost());
-	setTotalTravelTime(copyMe.getTotalTravelTime());
-	setMaxTravelTime(copyMe.getMaxTravelTime());
-	setAvgTravelTime(copyMe.getAvgTravelTime());
-	//		private double totalDemand = 0.0D;
-	//		private double totalDistance = 0.0D;
-	//		private double totalCost = 0.0D;
-	//		private double totalTravelTime = 0.0D;
-	//		private double maxTravelTime = 0.0D;
-	//		private double avgTravelTime = 0.0D;
-}
+	public TRAttributes(final TRAttributes copyMe) {
+		setTotalDemand(copyMe.getTotalDemand());
+		setTotalDistance(copyMe.getTotalDistance());
+		setTotalCost(copyMe.getTotalCost());
+		setTotalTravelTime(copyMe.getTotalTravelTime());
+		setMaxTravelTime(copyMe.getMaxTravelTime());
+		setAvgTravelTime(copyMe.getAvgTravelTime());
+	}
 
 
 
 
-public TRAttributes() {
-}
-
-
-//    public boolean setTotalDistance(final float theTotalDistance){
-//        if(theTotalDistance >= 0) {
-//            this.totalDistance = theTotalDistance;
-//        }
-//        return false;
-//    }
-
+	public TRAttributes() {
+	}
 
 }

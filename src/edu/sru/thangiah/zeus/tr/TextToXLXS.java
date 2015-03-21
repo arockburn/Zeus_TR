@@ -57,15 +57,6 @@ public void convertToXLXS()
 	String readLn;
 	StringTokenizer st;
 	double currentValue;
-
-	//read in the first line
-	//			readLn = br.readLine();
-	//print out the line that was read
-	//System.out.println("This is s:" + s);
-
-	//			st = new StringTokenizer(readLn);
-
-	//		while(st.hasMoreElements()) {
 	int rowCounter = 0;
 	int columnCounter = 0;
 	while((readLn = br.readLine()) != null) {

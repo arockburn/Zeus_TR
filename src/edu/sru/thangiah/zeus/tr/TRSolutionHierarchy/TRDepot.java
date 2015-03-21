@@ -93,17 +93,6 @@ public TRDepot() {
 }
 
 
-//public TRDepot(final TRCoordinates coordinates) {
-//		super(edu.sru.thangiah.zeus.trGeneric.TRSolutionHierarchy.TRTrucksList.class);
-
-//	this.setCoordinates(coordinates);
-//	setAttributes(new TRAttributes());
-//	trucksSubList = new TRTrucksList(coordinates);
-//}
-
-
-
-
 public boolean insertShipment(final TRShipment theShipment) {
 	boolean status = false;
 
@@ -123,13 +112,6 @@ public TRDepot getNext() {
 public TRAttributes getAttributes() {
 	return this.attributes;
 }
-
-
-//	@Override
-//	public boolean createSubList() {
-//		return false;
-//	}
-
 
 
 

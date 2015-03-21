@@ -69,11 +69,6 @@ public class TRCoordinates {
         }
         return false;
     }
-//	else if(this.isCartesian && point.isCartesian) {
-//put formula in here
-//	}
-//	return -1.0;
-//}
 
 
 
@@ -132,27 +127,6 @@ public class TRCoordinates {
         return Math.round(radiusOfEarthInUnits * c);
     }
 
-//	if(this.isLongitudeLatitude && point.isLongitudeLatitude) {
-//	final double R = 6371; // In kilometers
-//	double latitudeOne = this.latitude;
-//	double longitudeOne = this.longitude;
-//	double latitudeTwo = point.latitude;
-//	double longitudeTwo = point.longitude;
-//
-//	double latitudeDistance = Math.toRadians(latitudeTwo - latitudeOne);
-//	double longitudeDistance = Math.toRadians(longitudeTwo - longitudeOne);
-//	latitudeOne = Math.toRadians(latitudeOne);
-//	latitudeTwo = Math.toRadians(latitudeTwo);
-//
-//	double a = Math.sin(latitudeDistance / 2) * Math.sin(latitudeDistance / 2) + Math.sin(longitudeDistance / 2) *
-// Math.sin(longitudeDistance / 2) * Math.cos(latitudeOne) * Math.cos(latitudeTwo);
-//	double c = 2 * Math.asin(Math.sqrt(a));
-//	return R * c;
-//}
-
-
-
-
     public double calculateAngleBearing(final TRCoordinates point) {
         //http://stackoverflow.com/questions/3932502/calcute-angle-between-two-latitude-longitude-points
         double long2 = this.getLongitude();
@@ -179,11 +153,6 @@ public class TRCoordinates {
 
     public boolean isValidLongitudeLatitude(final TRCoordinates coordinates) {
         return isValidLongitudeLatitude(coordinates.getLongitude(), coordinates.getLatitude());
-        //	if(longitude <= MAXIMUM_LONGITUDE && longitude >= MINIMUM_LONGITUDE && latitude <= MAXIMUM_LATITUDE &&
-        // latitude >= MINIMUM_LATITUDE){
-        //		return true;
-        //	}
-        //	return false;
     }
 
 }

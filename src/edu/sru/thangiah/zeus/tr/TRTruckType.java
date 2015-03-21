@@ -1,8 +1,5 @@
 package edu.sru.thangiah.zeus.tr;
 
-//import the parent class
-
-
 import edu.sru.thangiah.zeus.core.TruckType;
 
 
@@ -86,9 +83,6 @@ public TRTruckType(int typeNumber, float maxDistance, float maxCapacity, String 
 	}
 	else {
 		setMaxDuration(maxDistance);
-		//if we have a real value
-		//set max distance to this
-		//maxDistance == maxDuration
 	}
 
 	if(maxCapacity == 0) {
@@ -99,9 +93,6 @@ public TRTruckType(int typeNumber, float maxDistance, float maxCapacity, String 
 	}
 	else {
 		setMaxCapacity(maxCapacity);
-		//if we have a real value
-		//set max distance to this
-		//maxDistance == maxDuration
 	}
 
 	setFixedCost(getMaxCapacity());
@@ -109,10 +100,5 @@ public TRTruckType(int typeNumber, float maxDistance, float maxCapacity, String 
     setVariableCost(10000000);
 }//END CONSTRUCTOR *******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-
-
-//    public double getVariableCost() {
-//        return this.variableCost;
-//    }
 
 }

@@ -106,20 +106,6 @@ public TR(String dataFile, boolean isMakeSeparateFile, Object selectionTypeObjec
 
 	TRProblemInfo.selectShipType = selectionTypeObject;
 
-	//		Settings.printDebug(Settings.COMMENT, selectionTypeObject.WhoAmI());
-
-	//	PVRPProblemInfo.selectShipType = new PVRPClosestEuclideanDistToDepot();
-	//	Settings.printDebug(Settings.COMMENT, PVRPClosestEuclideanDistToDepot.WhoAmI());
-	//This sets our heuristic to choose the next shipment
-	//there are several more commented out under this
-
-	//	PVRPProblemInfo.selectShipType = new PVRPSmallestPolarAngleToDepot();
-	//	Settings.printDebug(Settings.COMMENT, PVRPSmallestPolarAngleToDepot.WhoAmI());
-
-	//	PVRPProblemInfo.selectShipType = new PVRPSmallestPolarAngleShortestDistToDepot();
-	//	Settings.printDebug(Settings.COMMENT, PVRPSmallestPolarAngleShortestDistToDepot.WhoAmI());
-
-
 	TRProblemInfo.insertShipType = new TRGreedyInsertion();
 	Settings.printDebug(Settings.COMMENT, TRGreedyInsertion.WhoAmI());
 	//Sets up our shipment insertion type -- we only have one hueristic for this
@@ -178,6 +164,8 @@ public TR(String dataFile, boolean isMakeSeparateFile, Object selectionTypeObjec
 	compareResults(dataFile);
 	//writes an Excel file that compares our results to some results
 	//from various research papers
+
+	//todo do we need to implement the gui for this?
 
 	//	System.out.println("\nLAUNCHING GUI\n");
 	//
@@ -355,14 +343,6 @@ public int readDataFromFile(final String TRFileName)
 	//	mainShipments.removeByIndex(position);
 	mainDepots.insertAfterLastIndex(theDepot);
 
-	//	for(int x = 0; x < TRProblemInfo.NUMBER_TRUCKS; x++){
-	//	mainDepots.getFirst().setSubList(new TRTrucksList());
-	//	Object test = mainDepots.getFirst().getSubList();
-	//	if(test == null){
-	//		System.out.print("wtf dude");
-	//	}
-
-
 	TRTruck theTruck = new TRTruck();
 	TRDepot firstDepot = mainDepots.getFirst();
 	TRTrucksList truckList = firstDepot.getSubList();
@@ -379,10 +359,6 @@ public int readDataFromFile(final String TRFileName)
 		daysList.insertAfterLastIndex(temporaryDay);
 
 	}
-
-
-	//	}
-	//	mainDepots
 
 	return -1;
 }
@@ -437,7 +413,7 @@ public void createInitialRoutes()
 
 		theShipment = mainShipments.getNextInsertShipment(mainDepots, currentUsedDepot, mainShipments,
 														  currentUsedShip);
-		//		TRProblemInfo.selectShipType
+
 		//Send the entire mainDepots and mainShipments to get the next shipment to be inserted including the current
 		// depot
 
@@ -456,12 +432,7 @@ public void createInitialRoutes()
 			//we couldn't choose shipment
 			Settings.printDebug(Settings.COMMENT, "No shipment was selected");
 		}
-/*
-		if (theShipment.getIndex() == 1) {
-			System.out.print("");
-		}
-		*/
-//		if(!mainDepots.insertShipment(theShipment)) {
+
         if(!insertShipment(mainDepots, theShipment)){
 			//The selected shipment couldn't be inserted in the selected location
 			Settings.printDebug(Settings.COMMENT, "The Shipment: <" + theShipment.getNodeNumber() +

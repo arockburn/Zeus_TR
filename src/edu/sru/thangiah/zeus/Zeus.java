@@ -23,12 +23,10 @@ public class Zeus {
    */
   //DR. SAM's MAIN
 
-	//PVRP GROUP 06 MAIN
+	//TR Main
 	public static void main(String[] args) throws Exception
 	{
 		TRRoot theTRRoot = new TRRoot();
-//		PVRPRoot thePVRPRoot = new PVRPRoot();
-//		VRPRoot theVRPRoot = new VRPRoot();
 		//System.gc();
 
 	}

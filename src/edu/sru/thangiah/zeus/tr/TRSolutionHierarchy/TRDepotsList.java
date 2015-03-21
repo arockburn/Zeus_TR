@@ -243,86 +243,8 @@ public boolean isValidHeadTail() {
 public boolean insertShipment(final TRShipment theShipment) {
     return false;
 
-//    TRGreedyInsertionRevised insertion = new TRGreedyInsertionRevised();
-//
-//    insertion.getInsertShipment(this, theShipment);
-//
-//    return true;
-//	boolean status = false;
-//    final int LARGE_INT = 999999999;
-//    int lowestDistance = LARGE_INT;
-//    TRDepot lowestDepot = null;
-//
-//	TRDepot theDepot = this.getFirst();
-//
-//
-//    while(theDepot != this.getTail()){
-//        TRDepot copyDepot = new TRDepot(theDepot);
-//
-//        if(copyDepot.insertShipment(theShipment)){
-//            TRProblemInfo.depotLLLevelCostF.calculateTotalsStats(this);
-//            final int DEPOT_DISTANCE = (int) copyDepot.getAttributes().getTotalDistance();
-//            if(DEPOT_DISTANCE < lowestDistance){
-//               lowestDistance = DEPOT_DISTANCE;
-//                lowestDepot = theDepot;
-//            }
-//        }
-//
-//        theDepot = theDepot.getNext();
-//    }
-//
-//    if(lowestDistance != LARGE_INT && lowestDepot != null){
-//        lowestDepot.insertShipment(theShipment);
-//        return true;
-//    }
-//    return false;
-//
-//
-//
-//
-//	while(theDepot != this.getTail()) {
-//		if(theDepot.insertShipment(theShipment)) {
-//            if(theDepot.getAttributes().getTotalDistance() < lowestDistance){
-//                lowestDistance = (int) theDepot.getAttributes().getTotalDistance();
-//                lowestDepot = theDepot;
-//            }
-//            theDepot.
-//		}
-//		theDepot = theDepot.getNext();
-//	}
-
-//	return false;
-
-	/*
-	boolean status = false;
-
-	TRDepot depot = getHead().getNext();
-	TRTrucksList truckLL = null;
-
-//	double  test = tempDepotLL.getAttributes().getTotalDemand();
-	while (depot != this.getTail()) {
-		//Get truck to insert the shipment
-		//while we have more depots
-
-		truckLL = depot.getSubList();
-		//get the trucks linked ist
-
-		status = truckLL.insertShipment(theShipment);
-		//insert the shipment into the trucks linked list
-
-		if (status) {
-			break;    //if it inserted into the list okay then break
-		}
-		depot = depot.getNext();
-	}
-	return status;    //return true if inserted OK
-	*/
 }//END INSERT_SHIPMENT *********<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-//@Override
-//public boolean insertShipment(final TRShipment theShipment) {
-//	return false;
-//}
 
 
 

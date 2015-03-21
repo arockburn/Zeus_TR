@@ -79,14 +79,4 @@ public class TRLinearLowestDistanceInsertion {
         nodesList.insertShipment(insertMe);
     }
 
-//    private void stepThroughNodes(TRNodesList nodesList) {
-//        TRNode theNode = nodesList.getFirst();
-//
-//        while (theNode != nodesList.getTail()) {
-//
-//            theNode = theNode.getNext();
-//        }
-//    }
-
-
 }

@@ -10,16 +10,6 @@ import edu.sru.thangiah.zeus.tr.TRAttributes;
 abstract public interface DoublyLinkedList {
 
 
-//private final Constructor<? extends T> ctor;
-//private T field;
-
-//    public T            head;
-//    public T            tail;
-//    public TRAttributes attributes;
-//    public Class<T>     clazz;
-//    public int size = 0;
-
-
 public void setUpHeadTail();
 
 public void linkHeadTail();
@@ -94,8 +84,5 @@ public double getDistanceTravelledMiles();
 public boolean setHeadNext(final ObjectInList nextHead);
 
 public boolean setTailPrevious(final ObjectInList previousTail);
-
-
-//    public Object copyThis(final Object copyMe);
 
 }
