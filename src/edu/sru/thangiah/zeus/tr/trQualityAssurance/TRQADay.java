@@ -72,8 +72,8 @@ public class TRQADay {
         for (int i = 1; i < getNodes().size(); i++) {
             nodeTwo = (TRQANode) getNodes().elementAt(i);
 
-            TRCoordinates firstPoint = new TRCoordinates(nodeOne.getX(), nodeOne.getY());
-            TRCoordinates secondPoint = new TRCoordinates(nodeTwo.getX(), nodeTwo.getY());
+            TRCoordinates firstPoint = new TRCoordinates(nodeOne.getY(), nodeOne.getX());
+            TRCoordinates secondPoint = new TRCoordinates(nodeTwo.getY(), nodeTwo.getX());
             distance = firstPoint.calculateDistanceThisMiles(secondPoint);
 
             //PYTHAGOREAN THEROEM

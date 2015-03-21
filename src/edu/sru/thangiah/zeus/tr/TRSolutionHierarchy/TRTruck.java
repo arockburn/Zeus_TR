@@ -128,6 +128,8 @@ public TRTruck(final TRCoordinates homeDepotCoordinates) {
 //CONSTRUCTOR
 public TRTruck() {
 	setAttributes(new TRAttributes());
+	//todo find a better way to set this number. Don't leave it hardcoded
+	setTruckNum(0);
 }
 
 

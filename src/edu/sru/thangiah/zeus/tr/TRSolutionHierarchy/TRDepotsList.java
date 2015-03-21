@@ -34,6 +34,7 @@ private TRDepot      tail;
 public TRDepotsList() {
 	setUpHeadTail();
 	setAttributes(new TRAttributes());
+
 }//END CONSTRUCTOR *******************<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
@@ -43,6 +44,9 @@ public TRDepotsList() {
 public void setUpHeadTail() {
 	this.head = new TRDepot();
 	this.tail = new TRDepot();
+	super.setHead(null);
+	super.setTail(null);
+	super.setAttributes(null);
 	//	setHead((ObjectInList) new TRDepot());
 	//	setTail((ObjectInList) new TRDepot());
 	linkHeadTail();

@@ -80,6 +80,8 @@ public void setSubList(final DoublyLinkedList trucksSubList) {
 
 public TRDepot(final TRCoordinates coordinates) {
 	this.coordinates = coordinates;
+	//todo set this without hardcoding
+	this.setDepotNum(0);
 	setSubList(new TRTrucksList());
 }
 

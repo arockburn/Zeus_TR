@@ -702,6 +702,8 @@ public void writeShortSolution(String file)
 
 	XSSFWorkbook workbook = null;    //holds our workbook
 	XSSFSheet sheet = null;            //holds our sheet
+//	Workbook workbook = null;
+//	Sheet sheet = null;
 	Row row = null;                    //a row from our sheet
 	Cell cell = null;                //a cell from our row
 
@@ -732,26 +734,31 @@ public void writeShortSolution(String file)
 		File theFile = new File(ProblemInfo.outputPath + TRProblemInfo.shortSolutionOutputFile);
 
 		if(theFile.exists() && !theFile.isDirectory()) {
-			in = new FileInputStream(new File(ProblemInfo.outputPath + TRProblemInfo.shortSolutionOutputFile));
-			//create a file input stream for the existing file
+			try {
+				in = new FileInputStream(new File(ProblemInfo.outputPath + TRProblemInfo.shortSolutionOutputFile));
+				//create a file input stream for the existing file
 
-			workbook = new XSSFWorkbook(in);
-			//re-create all workbooks based on existing file
+				workbook = new XSSFWorkbook(in);
+//				workbook = WorkbookFactory.create(in);
+				//re-create all workbooks based on existing file
 
-			out = new FileOutputStream(new File((ProblemInfo.outputPath + TRProblemInfo.shortSolutionOutputFile)));
-			//setup output file
+				out = new FileOutputStream(new File((ProblemInfo.outputPath + TRProblemInfo.shortSolutionOutputFile)));
+				//setup output file
 
 
-			for(int x = 0; x < workbook.getNumberOfSheets(); x++) {
-				if(workbook.getSheetAt(x).getSheetName().equals(file)) {
-					isSheetFound = true;
-					sheet = workbook.getSheetAt(x);
-					break;
+				for (int x = 0; x < workbook.getNumberOfSheets(); x++) {
+					if (workbook.getSheetAt(x).getSheetName().equals(file)) {
+						isSheetFound = true;
+						sheet = workbook.getSheetAt(x);
+						break;
+					}
 				}
+				//do we have a problem already in this workbook as a sheet
+				//if so, edit it instead of creating a new one
 			}
-			//do we have a problem already in this workbook as a sheet
-			//if so, edit it instead of creating a new one
-
+			catch(Exception e){
+				e.printStackTrace();
+			}
 		}
 		else {
 			//otherwise we must start from scratch as the file does not exist
@@ -955,6 +962,7 @@ public void writeLongSolution(String file)
 			//if so, prepare to just edit/modify the file
 			in = new FileInputStream(new File(ProblemInfo.outputPath + TRProblemInfo.longSolutionOutputFile));
 			workbook = new XSSFWorkbook(in);
+//			workbook = WorkbookFactory.create(in);
 			out = new FileOutputStream(new File((ProblemInfo.outputPath + TRProblemInfo.longSolutionOutputFile)));
 
 			//does the sheet for the current problem already exist
@@ -1186,7 +1194,9 @@ public void writeLongSolution(String file)
 				cell.setCellStyle(BOLD_STYLE);
 
 				cell = row.createCell(columnCounter++);
-				double maxDemand = theTruck.getTruckType().getMaxCapacity();
+//				double maxDemand = theTruck.getTruckType().getMaxCapacity();
+				//todo no max demand for this problem set so we should probably do something about having it in our output
+				double maxDemand = 999999999;
 				cell.setCellValue(maxDemand);
 				cell.setCellStyle(BOLD_CENTER_STYLE);
 
@@ -1223,7 +1233,9 @@ public void writeLongSolution(String file)
 				cell.setCellStyle(BOLD_STYLE);
 
 				cell = row.createCell(columnCounter++);
-				double maxDistance = ((TRTruckType) TRProblemInfo.truckTypes.elementAt(0)).getMaxDuration();
+				//todo do something with this. there is no max distance for TR problem set
+				double maxDistance = 99999999;
+//				double maxDistance = ((TRTruckType) TRProblemInfo.truckTypes.elementAt(0)).getMaxDuration();
 				cell.setCellValue(maxDistance);
 				cell.setCellStyle(BOLD_CENTER_STYLE);
 

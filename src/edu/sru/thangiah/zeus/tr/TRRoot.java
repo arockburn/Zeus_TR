@@ -113,8 +113,8 @@ private void setupProblemInfoFileLocations() {
 	//ADDED STATIC VARIABLES IN INHERITING PVRP CLASS
 	//	TRProblemInfo.compareToInputPath = TRProblemInfo.workingDirectory + FS + "data" + FS + "TR" + FS +
 	//											   "compareTo" + FS;
-	//	TRProblemInfo.compareToInputFile = "Comparison_List.xlsx";
-	//	TRProblemInfo.comparisonOutputFile = "Comparison_Results.xlsx";
+	TRProblemInfo.compareToInputFile = "Comparison_List.xlsx";
+	TRProblemInfo.comparisonOutputFile = "Comparison_Results.xlsx";
 	TRProblemInfo.longSolutionOutputFile = "All_Long_Solutions.xlsx";
 	TRProblemInfo.shortSolutionOutputFile = "All_Short_Solutions.xlsx";
 }
