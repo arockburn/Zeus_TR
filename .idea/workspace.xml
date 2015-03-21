@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06f6a793-39a8-4b19-a98a-256615883e1a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/DoublyLinkedList.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/DoublyLinkedList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/ObjectInList.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/ObjectInList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/Temp_TR_Shipments.xlsx" afterPath="$PROJECT_DIR$/temp/Temp_TR_Shipments.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/Temp_TR_Solutions.xlsx" afterPath="$PROJECT_DIR$/temp/Temp_TR_Solutions.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TR.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TR.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRAttributes.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRAttributes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRCoordinates.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRCoordinates.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRDay.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRDay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRDaysList.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRDaysList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRDepot.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRDepot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRDepotsList.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRDepotsList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRFeasibility.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRFeasibility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/Heuristics/Insertion/TRLinearLowestDistanceInsertion.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/Heuristics/Insertion/TRLinearLowestDistanceInsertion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRNode.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRNodesList.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRNodesList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRProblemInfo.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRProblemInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/trQualityAssurance/TRQADay.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/trQualityAssurance/TRQADay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/trQualityAssurance/TRQADepot.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/trQualityAssurance/TRQADepot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRRoot.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRRoot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRShipment.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRShipment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRShipmentsList.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRShipmentsList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRTruck.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRTruck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRTruckType.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRTruckType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRTrucksList.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRTrucksList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TextToXLXS.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TextToXLXS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/Zeus.java" afterPath="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/Zeus.java" />
     </list>
     <ignored path="Zeus_TR.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +29,18 @@
     <favorites_list name="Zeus_TR" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="TR.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TR.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.194175" vertical-offset="19302" max-vertical-offset="29286">
+              <caret line="710" column="34" selection-start-line="710" selection-start-column="34" selection-end-line="710" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +53,6 @@
         <option value="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRFeasibility.java" />
         <option value="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRCoordinates.java" />
         <option value="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRAttributes.java" />
-        <option value="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TR.java" />
         <option value="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TextToXLXS.java" />
         <option value="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/Heuristics/Insertion/TRLinearLowestDistanceInsertion.java" />
         <option value="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/ObjectInList.java" />
@@ -82,6 +71,7 @@
         <option value="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/trQualityAssurance/TRQADay.java" />
         <option value="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRProblemInfo.java" />
         <option value="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRRoot.java" />
+        <option value="$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TR.java" />
       </list>
     </option>
   </component>
@@ -528,12 +518,12 @@
       <created>1426957020604</created>
       <option name="number" value="Default" />
       <updated>1426957020604</updated>
-      <workItem from="1426957022410" duration="6090000" />
+      <workItem from="1426957022410" duration="7051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6090000" />
+    <option name="totallyTimeSpent" value="7051000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -557,7 +547,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -580,13 +570,42 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19601594" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19601594" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37808642" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27006173" sideWeight="0.5003984" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287037" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19601594" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37808642" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36265433" sideWeight="0.4996016" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -609,13 +628,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TR.java</url>
-          <line>812</line>
+          <line>817</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TR.java</url>
-          <line>711</line>
+          <line>716</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -677,14 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRFeasibility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52396697" vertical-offset="1789" max-vertical-offset="2394">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRCoordinates.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.70247936" vertical-offset="2275" max-vertical-offset="2880">
@@ -697,14 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7669903" vertical-offset="552" max-vertical-offset="1170">
           <caret line="57" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4280992" vertical-offset="8316" max-vertical-offset="29196">
-          <caret line="434" column="8" selection-start-line="434" selection-start-column="8" selection-end-line="434" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -781,14 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRDepot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7669421" vertical-offset="2833" max-vertical-offset="3438">
-          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRDaysList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44660193" vertical-offset="6870" max-vertical-offset="7704">
@@ -814,31 +809,31 @@
         <state vertical-scroll-proportion="-4.9801655" vertical-offset="3157" max-vertical-offset="4230">
           <caret line="8" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1085#1086#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1309#1310#0" expanded="true" />
-            <element signature="e#1335#1336#0" expanded="true" />
-            <element signature="e#1408#1409#0" expanded="true" />
-            <element signature="e#1456#1457#0" expanded="true" />
-            <element signature="e#1499#1500#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1638#1639#0" expanded="true" />
-            <element signature="e#1968#1969#0" expanded="true" />
-            <element signature="e#1991#1992#0" expanded="true" />
-            <element signature="e#2054#2055#0" expanded="true" />
-            <element signature="e#2085#2086#0" expanded="true" />
-            <element signature="e#2716#2717#0" expanded="true" />
-            <element signature="e#2743#2744#0" expanded="true" />
-            <element signature="e#2814#2815#0" expanded="true" />
-            <element signature="e#2853#2854#0" expanded="true" />
-            <element signature="e#3057#3058#0" expanded="true" />
-            <element signature="e#3072#3073#0" expanded="true" />
-            <element signature="e#3094#3095#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3920#3921#0" expanded="true" />
-            <element signature="e#3943#3944#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1085#1086#0" expanded="false" />
+            <element signature="e#1119#1120#0" expanded="false" />
+            <element signature="e#1309#1310#0" expanded="false" />
+            <element signature="e#1335#1336#0" expanded="false" />
+            <element signature="e#1408#1409#0" expanded="false" />
+            <element signature="e#1456#1457#0" expanded="false" />
+            <element signature="e#1499#1500#0" expanded="false" />
+            <element signature="e#1528#1529#0" expanded="false" />
+            <element signature="e#1603#1604#0" expanded="false" />
+            <element signature="e#1638#1639#0" expanded="false" />
+            <element signature="e#1968#1969#0" expanded="false" />
+            <element signature="e#1991#1992#0" expanded="false" />
+            <element signature="e#2054#2055#0" expanded="false" />
+            <element signature="e#2085#2086#0" expanded="false" />
+            <element signature="e#2716#2717#0" expanded="false" />
+            <element signature="e#2743#2744#0" expanded="false" />
+            <element signature="e#2814#2815#0" expanded="false" />
+            <element signature="e#2853#2854#0" expanded="false" />
+            <element signature="e#3057#3058#0" expanded="false" />
+            <element signature="e#3072#3073#0" expanded="false" />
+            <element signature="e#3094#3095#0" expanded="false" />
+            <element signature="e#3134#3135#0" expanded="false" />
+            <element signature="e#3920#3921#0" expanded="false" />
+            <element signature="e#3943#3944#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -848,37 +843,37 @@
         <state vertical-scroll-proportion="-3.6601942" vertical-offset="2730" max-vertical-offset="3924">
           <caret line="26" column="85" selection-start-line="0" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#935#936#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
-            <element signature="e#1343#1344#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="e#1428#1429#0" expanded="true" />
-            <element signature="e#1477#1478#0" expanded="true" />
-            <element signature="e#1527#1528#0" expanded="true" />
-            <element signature="e#1545#1546#0" expanded="true" />
-            <element signature="e#1667#1668#0" expanded="true" />
-            <element signature="e#1696#1697#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
-            <element signature="e#1806#1807#0" expanded="true" />
-            <element signature="e#2137#2138#0" expanded="true" />
-            <element signature="e#2160#2161#0" expanded="true" />
-            <element signature="e#2223#2224#0" expanded="true" />
-            <element signature="e#2255#2256#0" expanded="true" />
-            <element signature="e#2886#2887#0" expanded="true" />
-            <element signature="e#2913#2914#0" expanded="true" />
-            <element signature="e#2984#2985#0" expanded="true" />
-            <element signature="e#3024#3025#0" expanded="true" />
-            <element signature="e#3074#3075#0" expanded="true" />
-            <element signature="e#3092#3093#0" expanded="true" />
-            <element signature="e#3152#3153#0" expanded="true" />
-            <element signature="e#3167#3168#0" expanded="true" />
-            <element signature="e#3219#3220#0" expanded="true" />
-            <element signature="e#3249#3250#0" expanded="true" />
-            <element signature="e#3310#3311#0" expanded="true" />
-            <element signature="e#3347#3348#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#901#902#0" expanded="false" />
+            <element signature="e#935#936#0" expanded="false" />
+            <element signature="e#1289#1290#0" expanded="false" />
+            <element signature="e#1320#1321#0" expanded="false" />
+            <element signature="e#1343#1344#0" expanded="false" />
+            <element signature="e#1383#1384#0" expanded="false" />
+            <element signature="e#1428#1429#0" expanded="false" />
+            <element signature="e#1477#1478#0" expanded="false" />
+            <element signature="e#1527#1528#0" expanded="false" />
+            <element signature="e#1545#1546#0" expanded="false" />
+            <element signature="e#1667#1668#0" expanded="false" />
+            <element signature="e#1696#1697#0" expanded="false" />
+            <element signature="e#1771#1772#0" expanded="false" />
+            <element signature="e#1806#1807#0" expanded="false" />
+            <element signature="e#2137#2138#0" expanded="false" />
+            <element signature="e#2160#2161#0" expanded="false" />
+            <element signature="e#2223#2224#0" expanded="false" />
+            <element signature="e#2255#2256#0" expanded="false" />
+            <element signature="e#2886#2887#0" expanded="false" />
+            <element signature="e#2913#2914#0" expanded="false" />
+            <element signature="e#2984#2985#0" expanded="false" />
+            <element signature="e#3024#3025#0" expanded="false" />
+            <element signature="e#3074#3075#0" expanded="false" />
+            <element signature="e#3092#3093#0" expanded="false" />
+            <element signature="e#3152#3153#0" expanded="false" />
+            <element signature="e#3167#3168#0" expanded="false" />
+            <element signature="e#3219#3220#0" expanded="false" />
+            <element signature="e#3249#3250#0" expanded="false" />
+            <element signature="e#3310#3311#0" expanded="false" />
+            <element signature="e#3347#3348#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1059,14 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/trQualityAssurance/TRQA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="8766">
-          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/trQualityAssurance/TRQANodesList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7378641" vertical-offset="174" max-vertical-offset="792">
@@ -1160,9 +1147,41 @@
         <state vertical-scroll-proportion="0.70247936" vertical-offset="1645" max-vertical-offset="3294">
           <caret line="115" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5646#0" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#5646#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/trQualityAssurance/TRQA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27184466" vertical-offset="8148" max-vertical-offset="8766">
+          <caret line="485" column="6" selection-start-line="485" selection-start-column="6" selection-end-line="485" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRSolutionHierarchy/TRDepot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21035598" vertical-offset="1166" max-vertical-offset="3438">
+          <caret line="82" column="6" selection-start-line="82" selection-start-column="6" selection-end-line="82" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TRFeasibility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21035598" vertical-offset="1670" max-vertical-offset="2394">
+          <caret line="101" column="10" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/sru/thangiah/zeus/tr/TR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.194175" vertical-offset="19302" max-vertical-offset="29286">
+          <caret line="710" column="34" selection-start-line="710" selection-start-column="34" selection-end-line="710" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -705,6 +705,11 @@ public void writeShortSolution(String file)
 		File theFile = new File(ProblemInfo.outputPath + TRProblemInfo.shortSolutionOutputFile);
 
 		if(theFile.exists() && !theFile.isDirectory()) {
+			/*
+			todo this is where the output is messing up. Throwing an invalid format exception. Tried switicing to a
+			workbook factory but that seems to require a byte stream wrapper to work. Need more screen space
+			to take care of this. 
+			 */
 			try {
 				in = new FileInputStream(new File(ProblemInfo.outputPath + TRProblemInfo.shortSolutionOutputFile));
 				//create a file input stream for the existing file
